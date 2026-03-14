@@ -9,8 +9,14 @@ namespace Mini_Projects
             while (true)
             {
                 Console.WriteLine("Type the number or 'exit' to quit");
-                Console.WriteLine("1. Random numbers and sum");
-                Console.WriteLine("2. Classify Numbers (in progress)");
+                Console.BackgroundColor = ConsoleColor.DarkGray;
+                Console.WriteLine("1. Search and learn C# Random");
+                Console.WriteLine("2. Random numbers and sum");
+                Console.WriteLine("3. Classify Numbers");
+                Console.WriteLine("4. Random_Numbers (in progress)");
+                Console.WriteLine();
+                Console.ResetColor();
+                Console.Write("Exercise: ");
 
                 string data = Console.ReadLine().Trim();
 
@@ -21,8 +27,14 @@ namespace Mini_Projects
 
                 if (data == "1")
                 {
+                    Console.WriteLine("Search and learn C# Random\n");
+                    continue;
+                }
+
+                if (data == "2")
+                {
                     int[] numbers = new int[5];
-                    int sum = 0;
+                    int sum = 0; //long is better
                     Console.Write("5 random numbers: ");
 
                     Random rnd = new Random();
@@ -30,13 +42,12 @@ namespace Mini_Projects
                     for (int i = 0; i < 5; i++)
                     {
                         numbers[i] = rnd.Next(1, 100);
-                        Console.Write(numbers[i]);
-                        Console.Write(" ");
+                        Console.Write("{0} ", numbers[i]);
                         sum += numbers[i];
                     }
 
                     //Console.WriteLine(String.Join(',', numbers)); 
-                    Console.WriteLine("");
+                    Console.WriteLine();
                     Console.Write("The sum is ");
                     Console.WriteLine(sum);
                     Console.WriteLine();
@@ -46,13 +57,13 @@ namespace Mini_Projects
                     continue;
                 }
 
-                if (data == "2")
+                if (data == "3")
                 {
                     Random rnd = new Random();
-                    int num = rnd.Next(1, 11);
+                    int num = rnd.Next(-10, 11);
 
                     Console.WriteLine("The generated number is {0}", num);
-                    if ( num % 2 == 0)
+                    if (num % 2 == 0)
                     {
                         Console.Write($"'{num}' is even and ");
                     }
@@ -61,7 +72,7 @@ namespace Mini_Projects
                         Console.Write($"'{num}' is odd and ");
                     }
 
-                    if (num< 0)
+                    if (num < 0)
                     {
                         Console.WriteLine("negative");
                     }
@@ -74,10 +85,63 @@ namespace Mini_Projects
                     continue;
                 }
 
+                if (data == "4")
+                {
+                    Console.Write("Enter number of integers to be generated: ");
+
+
+                    int count;
+                    if (!int.TryParse(Console.ReadLine(), out count))
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("You need to write a number");
+                        Console.ResetColor();
+                        continue;
+                    }
+
+
+                    if (count < 1)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("Enter a positive number");
+                        Console.ResetColor();
+                        continue;
+                    }
+
+                    int[] numbers = new int[count];
+                    int sum = 0;
+
+                    Console.Write("Generated values: ");
+
+                    Random rnd = new Random();
+
+                    for (int i = 0; i < count; i++)
+                    {
+                        numbers[i] = rnd.Next(1, 101);
+                        Console.Write("{0} ", numbers[i]);
+                        sum += numbers[i];
+                    }
+
+                    double avg = sum / count;
+                    Array.Sort(numbers); //bu neden hata veriyo
+
+                    Console.WriteLine();
+                    Console.Write("Average, min, max are ");
+                    Console.WriteLine($"{avg}, {numbers[0]}, {numbers[count - 1]}");
+                    Console.WriteLine();
+
+
+
+                    Console.WriteLine("-------------------------------");
+                    continue;
+                }
+
                 else
                 {
                     Console.WriteLine("-------------------------------");
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("You need to write a number from the list.");
+                    Console.ResetColor();
                 }
             }
 
