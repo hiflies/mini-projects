@@ -13,7 +13,8 @@ namespace Mini_Projects
                 Console.WriteLine("1. Search and learn C# Random");
                 Console.WriteLine("2. Random numbers and sum");
                 Console.WriteLine("3. Classify Numbers");
-                Console.WriteLine("4. Random_Numbers (in progress)");
+                Console.WriteLine("4. Random_Numbers");
+                Console.WriteLine("5. Two_Dice (in progress)");
                 Console.WriteLine();
                 Console.ResetColor();
                 Console.Write("Exercise: ");
@@ -27,7 +28,7 @@ namespace Mini_Projects
 
                 if (data == "1")
                 {
-                    Console.WriteLine("Search and learn C# Random\n");
+                    Console.WriteLine("Search and learn C# Random\n https://www.tutorialsteacher.com/articles/generate-random-numbers-in-csharp");
                     continue;
                 }
 
@@ -123,7 +124,7 @@ namespace Mini_Projects
                     }
 
                     double avg = sum / count;
-                    Array.Sort(numbers); //bu neden hata veriyo
+                    Array.Sort(numbers);
 
                     Console.WriteLine();
                     Console.Write("Average, min, max are ");
@@ -132,6 +133,54 @@ namespace Mini_Projects
 
 
 
+                    Console.WriteLine("-------------------------------");
+                    continue;
+                }
+
+                if (data == "5")
+                {
+                    int rollingtimes = 10;
+                    int[] sum = new int[10];
+                    int count = 0;
+
+                    Random rnd = new Random();
+
+                    Console.Write("Frequency table (sum, count) for rolling two dices 10000 times: ");
+
+                    for (int i = 0; i < rollingtimes; i++)
+                    {
+                        sum[i] = rnd.Next(1, 7);
+
+                    }
+                    for (int i = 0; i < rollingtimes; i++)
+                    {
+                        sum[i] += rnd.Next(1, 7);
+
+                    }
+                    Array.Sort(sum);
+
+
+                    for (int i = 0; i < rollingtimes; i++)
+                    {
+                        for (int j = 0; j < 11; j++)
+                        {
+                            if (sum[i] == j + 2)
+                            {
+                                count++;
+                            }
+                            else
+                            {
+                                Console.WriteLine($"{sum[i]} - {count}");
+                                count = 0;
+                                break;
+                            }
+                        }
+
+                        //Console.Write("{0} ", sum[i]);
+                        //Console.WriteLine(count);
+
+                    }
+                    Console.WriteLine();
                     Console.WriteLine("-------------------------------");
                     continue;
                 }
