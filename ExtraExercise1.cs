@@ -14,7 +14,8 @@ namespace Mini_Projects
                 Console.WriteLine("2. Random numbers and sum");
                 Console.WriteLine("3. Classify Numbers");
                 Console.WriteLine("4. Random_Numbers");
-                Console.WriteLine("5. Two_Dice (in progress)");
+                Console.WriteLine("5. Two_Dice");
+                Console.WriteLine("6. Short Name (in progress)");
                 Console.WriteLine();
                 Console.ResetColor();
                 Console.Write("Exercise: ");
@@ -139,52 +140,65 @@ namespace Mini_Projects
 
                 if (data == "5")
                 {
-                    int rollingtimes = 10;
-                    int[] sum = new int[10];
-                    int count = 0;
+                    int rollingtimes = 10000;
 
                     Random rnd = new Random();
+                    Dictionary<int, int> count = new Dictionary<int, int>();
 
                     Console.Write("Frequency table (sum, count) for rolling two dices 10000 times: ");
 
                     for (int i = 0; i < rollingtimes; i++)
                     {
-                        sum[i] = rnd.Next(1, 7);
+                        int die1 = rnd.Next(1, 7);
+                        int die2 = rnd.Next(1, 7);
+                        int sum = die1 + die2;
 
-                    }
-                    for (int i = 0; i < rollingtimes; i++)
-                    {
-                        sum[i] += rnd.Next(1, 7);
-
-                    }
-                    Array.Sort(sum);
-
-
-                    for (int i = 0; i < rollingtimes; i++)
-                    {
-                        for (int j = 0; j < 11; j++)
+                        if (count.ContainsKey(sum))
                         {
-                            if (sum[i] == j + 2)
-                            {
-                                count++;
-                            }
-                            else
-                            {
-                                Console.WriteLine($"{sum[i]} - {count}");
-                                count = 0;
-                                break;
-                            }
+                            count[sum]++;
+                        }
+                        else
+                        {
+                            count[sum] = 1;
                         }
 
-                        //Console.Write("{0} ", sum[i]);
-                        //Console.WriteLine(count);
-
                     }
+
+                    //int[] ll = new int[5];
+                    //for (int i = 0; i < ll.Length; i++)
+                    //{
+                    //    int item = ll[i];
+                    //    Console.WriteLine(item);
+                    //}
+
+                    //foreach (int item in ll)
+                    //{
+                    //    Console.WriteLine(item);
+                    //}
+
+                    foreach (var item in new SortedDictionary<int, int>(count))
+                    {
+                        Console.WriteLine(item.Key + "-" + item.Value);
+                    }
+
                     Console.WriteLine();
                     Console.WriteLine("-------------------------------");
                     continue;
                 }
 
+                if(data == "6")
+                {
+                    Console.Write("Enter the name and surname: ");
+                    Console.ReadLine();
+                    // ad soyad al
+                    // split ile ayir
+                    // ilkinin ilk harfi + .
+                    // ikincinin ilk dort harfi. dortten az ise tamami
+
+                    Console.WriteLine();
+                    Console.WriteLine("-------------------------------");
+                    continue;
+                }
                 else
                 {
                     Console.WriteLine("-------------------------------");
