@@ -190,7 +190,7 @@ namespace Mini_Projects
                 {
                     Console.Write("Enter the name and surname: ");
                     Console.ReadLine();
-                    // ad soyad al
+                    
                     // split ile ayir
                     // ilkinin ilk harfi + .
                     // ikincinin ilk dort harfi. dortten az ise tamami

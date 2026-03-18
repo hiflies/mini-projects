@@ -6,7 +6,7 @@ while (true)
     Console.BackgroundColor = ConsoleColor.DarkGray;
     Console.WriteLine("1. Product List");
     Console.WriteLine("2. Extra Exercise 1");
-    Console.WriteLine();
+    Console.WriteLine("");
 
     Console.ResetColor();
     Console.Write("App: ");
@@ -15,7 +15,7 @@ while (true)
 
     if (data == "1")
     {
-        ProductList.Run();
+        ProductLists.Run();
 
 
         Console.WriteLine("-------------------------------");
