@@ -21,27 +21,21 @@
 
                 if (data == "")
                 {
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("Du får inte ange ett tomt värde");
-                    Console.ResetColor();
+                    ConsoleHelper.WriteError("Du får inte ange ett tomt värde");
                     continue;
                 }
 
                 string[] parts = data.Split('-');
                 if (parts.Length != 2)
                 {
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("Felaktig format på produktnumret");
-                    Console.ResetColor();
+                    ConsoleHelper.WriteError("Felaktig format på produktnumret");
                     continue;
                 }
 
                 string text = parts[0];
                 if (text.Length == 0)
                 {
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("Felaktig format på vänstra delen av produktnumret");
-                    Console.ResetColor();
+                    ConsoleHelper.WriteError("Felaktig format på vänstra delen av produktnumret");
                     continue;
                 }
 
@@ -57,34 +51,26 @@
 
                 if (!isLetter)
                 {
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("Felaktig format på vänstra delen av produktnumret");
-                    Console.ResetColor();
+                    ConsoleHelper.WriteError("Felaktig format på vänstra delen av produktnumret");
                     continue;
                 }
 
                 if (parts[1].StartsWith("+"))
                 {
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("Felaktig format på högra delen av produktnumret");
-                    Console.ResetColor();
+                    ConsoleHelper.WriteError("Felaktig format på högra delen av produktnumret");
                     continue;
                 }
 
                 int number;
                 if (!int.TryParse(parts[1], out number))
                 {
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("Felaktig format på högra delen av produktnumret");
-                    Console.ResetColor();
+                    ConsoleHelper.WriteError("Felaktig format på högra delen av produktnumret");
                     continue;
                 }
 
                 if (number < 200 || number > 500)
                 {
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("Den numeriska delen måste vara mellan 200 och 500");
-                    Console.ResetColor();
+                    ConsoleHelper.WriteError("Den numeriska delen måste vara mellan 200 och 500");
                     continue;
                 }
 
@@ -98,10 +84,11 @@
             for (int i = 0; i < productList.Count; i++)
             {
                 Console.WriteLine(productList[i]);
-
             }
 
         }
+
+
     }
 }
 

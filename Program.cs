@@ -17,27 +17,21 @@ while (true)
     {
         ProductLists.Run();
 
-
-        Console.WriteLine("-------------------------------");
+        ConsoleHelper.WriteSeparator();
         continue;
     }
     else if (data == "2")
     {
-        Console.WriteLine("-------------------------------");
-        Console.WriteLine("Yapim asamasinda");
-        Console.WriteLine("-------------------------------");
+        ConsoleHelper.WriteProgress();
         ExtraExercise1.Run();
 
 
-        Console.WriteLine("-------------------------------");
+        ConsoleHelper.WriteSeparator();
         continue;
     }
     else
     {
-        Console.ForegroundColor = ConsoleColor.DarkRed;
-        Console.WriteLine("-------------------------------");
-        Console.WriteLine("You need to write a number from the list.");
-        Console.ResetColor();
+        ConsoleHelper.WriteError("You need to write a number from the list.", true);
 
     }
 

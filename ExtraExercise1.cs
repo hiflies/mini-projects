@@ -8,8 +8,7 @@ namespace Mini_Projects
         {
             while (true)
             {
-                Console.WriteLine("Type the number or 'exit' to quit");
-                Console.BackgroundColor = ConsoleColor.DarkGray;
+                ConsoleHelper.WriteInfo("Type the number or 'exit' to quit");
                 Console.WriteLine("1. Search and learn C# Random");
                 Console.WriteLine("2. Random numbers and sum");
                 Console.WriteLine("3. Classify Numbers");
@@ -54,8 +53,6 @@ namespace Mini_Projects
                     Console.WriteLine(sum);
                     Console.WriteLine();
 
-
-                    Console.WriteLine("-------------------------------");
                     continue;
                 }
 
@@ -83,7 +80,6 @@ namespace Mini_Projects
                         Console.WriteLine("positive");
                     }
 
-                    Console.WriteLine("-------------------------------");
                     continue;
                 }
 
@@ -95,18 +91,14 @@ namespace Mini_Projects
                     int count;
                     if (!int.TryParse(Console.ReadLine(), out count))
                     {
-                        Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine("You need to write a number");
-                        Console.ResetColor();
+                        ConsoleHelper.WriteError("You need to write a number");
                         continue;
                     }
 
 
                     if (count < 1)
                     {
-                        Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine("Enter a positive number");
-                        Console.ResetColor();
+                        ConsoleHelper.WriteError("Enter a positive number");
                         continue;
                     }
 
@@ -132,9 +124,6 @@ namespace Mini_Projects
                     Console.WriteLine($"{avg}, {numbers[0]}, {numbers[count - 1]}");
                     Console.WriteLine();
 
-
-
-                    Console.WriteLine("-------------------------------");
                     continue;
                 }
 
@@ -181,8 +170,6 @@ namespace Mini_Projects
                         Console.WriteLine(item.Key + "-" + item.Value);
                     }
 
-                    Console.WriteLine();
-                    Console.WriteLine("-------------------------------");
                     continue;
                 }
 
@@ -195,16 +182,12 @@ namespace Mini_Projects
                     // ilkinin ilk harfi + .
                     // ikincinin ilk dort harfi. dortten az ise tamami
 
-                    Console.WriteLine();
-                    Console.WriteLine("-------------------------------");
                     continue;
                 }
                 else
                 {
-                    Console.WriteLine("-------------------------------");
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("You need to write a number from the list.");
-                    Console.ResetColor();
+                    ConsoleHelper.WriteSeparator();
+                    ConsoleHelper.WriteError("You need to write a number from the list.");
                 }
             }
 

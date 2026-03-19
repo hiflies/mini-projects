@@ -7,8 +7,9 @@ namespace Mini_Projects
         {
             while (true)
             {
-                Console.WriteLine("Choose a version or 'q' to quit: ");
-                Console.BackgroundColor = ConsoleColor.Blue;
+                ConsoleHelper.WriteInfo("Choose a version or 'q' to quit: ");
+                //Console.WriteLine("Choose a version or 'q' to quit: ");
+                //Console.BackgroundColor = ConsoleColor.Blue;
                 Console.WriteLine("1. Product List Checkpoint 1");
                 Console.WriteLine("2. Product List Checkpoint 2");
                 Console.WriteLine("");
@@ -33,9 +34,12 @@ namespace Mini_Projects
                 }
                 else if (data == "2")
                 {
-                    Console.WriteLine("-------------------------------");
-                    Console.WriteLine("Yapim asamasinda");
-                    Console.WriteLine("-------------------------------");
+                    //Console.ForegroundColor = ConsoleColor.Cyan;
+                    //Console.WriteLine("-------------------------------");
+                    ConsoleHelper.WriteProgress();
+                    //Console.WriteLine("Yapim asamasinda");
+                    //Console.WriteLine("-------------------------------");
+                    Console.ResetColor();
                     ProductListV2.Run();
 
 
@@ -44,10 +48,11 @@ namespace Mini_Projects
                 }
                 else
                 {
-                    Console.ForegroundColor = ConsoleColor.DarkRed;
-                    Console.WriteLine("-------------------------------");
-                    Console.WriteLine("You need to write a number from the list.");
-                    Console.ResetColor();
+                    ConsoleHelper.WriteError("You need to write a number from the list.", true);
+                    //Console.ForegroundColor = ConsoleColor.DarkRed;
+                    //Console.WriteLine("-------------------------------");
+                    //Console.WriteLine("You need to write a number from the list.");
+                    //Console.ResetColor();
 
                 }
             }
