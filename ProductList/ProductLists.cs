@@ -1,5 +1,8 @@
-﻿using System;
-namespace Mini_Projects
+﻿using Mini_Projects.ProductList.V1;
+using Mini_Projects.ProductList.V2;
+using Mini_Projects.Utils;
+
+namespace Mini_Projects.ProductList
 {
     public class ProductLists
     {

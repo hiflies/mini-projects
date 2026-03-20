@@ -1,5 +1,6 @@
-﻿using System;
-namespace Mini_Projects
+﻿using Mini_Projects.Utils;
+
+namespace Mini_Projects.Exercises
 {
     public class ExtraExercise1
     {

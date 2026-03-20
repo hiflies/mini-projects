@@ -1,5 +1,4 @@
-﻿using System;
-namespace Mini_Projects
+﻿namespace Mini_Projects.Utils
 {
     public class ConsoleHelper
     {

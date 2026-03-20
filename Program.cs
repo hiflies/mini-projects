@@ -1,4 +1,6 @@
-﻿using Mini_Projects;
+﻿using Mini_Projects.Exercises;
+using Mini_Projects.ProductList;
+using Mini_Projects.Utils;
 
 while (true)
 {

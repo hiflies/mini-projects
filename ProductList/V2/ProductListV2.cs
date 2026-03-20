@@ -1,8 +1,6 @@
-﻿using System;
-using System.Runtime.ConstrainedExecution;
-using System.Xml.Linq;
+﻿using Mini_Projects.Utils;
 
-namespace Mini_Projects
+namespace Mini_Projects.ProductList.V2
 {
     public class ProductListV2
     {

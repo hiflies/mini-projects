@@ -1,4 +1,6 @@
-﻿namespace Mini_Projects
+﻿using Mini_Projects.Utils;
+
+namespace Mini_Projects.ProductList.V1
 {
     public static class ProductListV1
     {
