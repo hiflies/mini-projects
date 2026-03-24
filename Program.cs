@@ -5,8 +5,6 @@ using Mini_Projects.ProductList.V2;
 using Mini_Projects.Utils;
 
 
-
-
 // var telefon = new Product("","",2);
 // telefon.Color = "x";
 //
@@ -23,8 +21,6 @@ while (true)
     Console.WriteLine("1. Product List");
     Console.WriteLine("2. Exercises");
     Console.WriteLine("3. Asset Tracking");
-    // Console.WriteLine("3. Extra Exercise Week 13");
-
     Console.ResetColor();
     Console.Write("App: ");
 
@@ -33,33 +29,20 @@ while (true)
     if (data == "1")
     {
         ProductLists.Run();
-
-        ConsoleHelper.WriteSeparator();
         continue;
     }
-    else if (data == "2")
+
+    if (data == "2")
     {
-        ConsoleHelper.WriteProgress();
         Exercises.Run();
-
-
-        ConsoleHelper.WriteSeparator();
         continue;
     }
-    
-    else if (data == "3")
+
+    if (data == "3")
     {
         AssetTracking.Run();
-    
-    
-        ConsoleHelper.WriteSeparator();
         continue;
     }
-    
-    else
-    {
-        ConsoleHelper.WriteError("You need to write a number from the list.", true);
 
-    }
-
+    ConsoleHelper.WriteError("You need to write a number from the list.", true);
 }

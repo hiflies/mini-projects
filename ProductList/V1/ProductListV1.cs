@@ -10,8 +10,7 @@ namespace Mini_Projects.ProductList.V1
             List<string> productList = new();
 
             Console.WriteLine("Skriv in produkter. Avsluta med att skriva 'exit'");
-
-
+            
             while (true)
             {
                 Console.Write("Ange produkt: ");

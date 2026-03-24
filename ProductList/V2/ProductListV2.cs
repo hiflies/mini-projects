@@ -14,16 +14,12 @@ namespace Mini_Projects.ProductList.V2
                 
                 while (true)
                 {
-                    //Console.WriteLine("\nYeni ürün eklemek ister misiniz? (e/h)");
-                    //Console.WriteLine("Pick an option: ");
                     Console.Clear();
                     ConsoleHelper.WriteSeparator();
                     ConsoleHelper.WriteInfo("To enter a new product - follow the steps | To quit - enter 'Q'");
-
                     Console.Write("Enter a Category: ");
                     string category = Console.ReadLine();
-
-
+                    
                     if (category.ToLower() == "q")
                     {
                         Console.ForegroundColor = ConsoleColor.DarkGreen;
@@ -38,8 +34,7 @@ namespace Mini_Projects.ProductList.V2
                         ConsoleHelper.WriteInfo("To enter a new product - enter: 'P' | To quit - enter: 'Q'");
                         break;
                     }
-
-
+                    
                     Console.Write("Enter a Product Name: ");
                     string name = Console.ReadLine();
                     Console.Write("Enter a Price: ");
