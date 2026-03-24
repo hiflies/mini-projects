@@ -45,6 +45,11 @@
             Console.WriteLine("-----------------------------------");
         }
 
+        public static void AskEnterToContinue()
+        {
+            WriteSeparator();
+            Console.Write("Press enter to continue");
+            Console.ReadLine();
+        }
     }
-
 }

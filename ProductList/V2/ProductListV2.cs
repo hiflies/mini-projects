@@ -16,6 +16,7 @@ namespace Mini_Projects.ProductList.V2
                 {
                     //Console.WriteLine("\nYeni ürün eklemek ister misiniz? (e/h)");
                     //Console.WriteLine("Pick an option: ");
+                    Console.Clear();
                     ConsoleHelper.WriteSeparator();
                     ConsoleHelper.WriteInfo("To enter a new product - follow the steps | To quit - enter 'Q'");
 

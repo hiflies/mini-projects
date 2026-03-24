@@ -2,13 +2,14 @@
 
 namespace Mini_Projects.Exercises
 {
-    public class ExtraExercise1
+    public class ExtraExerciseW11
     {
 
         public static void Run()
         {
             while (true)
             {
+                Console.Clear();
                 ConsoleHelper.WriteInfo("Type the number or 'exit' to quit");
                 Console.WriteLine("1. Search and learn C# Random");
                 Console.WriteLine("2. Random numbers and sum");
@@ -30,6 +31,7 @@ namespace Mini_Projects.Exercises
                 if (data == "1")
                 {
                     Console.WriteLine("Search and learn C# Random\n https://www.tutorialsteacher.com/articles/generate-random-numbers-in-csharp");
+                    ConsoleHelper.AskEnterToContinue();
                     continue;
                 }
 
@@ -53,7 +55,7 @@ namespace Mini_Projects.Exercises
                     Console.Write("The sum is ");
                     Console.WriteLine(sum);
                     Console.WriteLine();
-
+                    ConsoleHelper.AskEnterToContinue();
                     continue;
                 }
 
@@ -80,7 +82,7 @@ namespace Mini_Projects.Exercises
                     {
                         Console.WriteLine("positive");
                     }
-
+                    ConsoleHelper.AskEnterToContinue();
                     continue;
                 }
 
@@ -124,7 +126,7 @@ namespace Mini_Projects.Exercises
                     Console.Write("Average, min, max are ");
                     Console.WriteLine($"{avg}, {numbers[0]}, {numbers[count - 1]}");
                     Console.WriteLine();
-
+                    ConsoleHelper.AskEnterToContinue();
                     continue;
                 }
 
@@ -170,7 +172,7 @@ namespace Mini_Projects.Exercises
                     {
                         Console.WriteLine(item.Key + "-" + item.Value);
                     }
-
+                    ConsoleHelper.AskEnterToContinue();
                     continue;
                 }
 

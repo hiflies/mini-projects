@@ -10,6 +10,7 @@ namespace Mini_Projects.ProductList
         {
             while (true)
             {
+                Console.Clear();
                 ConsoleHelper.WriteInfo("Choose a version or 'q' to quit: ");
                 //Console.WriteLine("Choose a version or 'q' to quit: ");
                 //Console.BackgroundColor = ConsoleColor.Blue;

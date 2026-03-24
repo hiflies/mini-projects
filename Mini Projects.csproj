@@ -8,4 +8,12 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Exercises\ExtraExerciseW13\Exercise1\" />
+    <Folder Include="Exercises\ExtraExerciseW13\Exercise1\Part2\" />
+    <Folder Include="Exercises\ExtraExerciseW13\Exercise2\Part3\" />
+    <Folder Include="Exercises\ExtraExerciseW13\Exercise2\Part4\" />
+    <Folder Include="Exercises\ExtraExerciseW13\Exercise2\Part5\" />
+  </ItemGroup>
+
 </Project>
