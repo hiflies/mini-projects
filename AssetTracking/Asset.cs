@@ -18,6 +18,3 @@ public abstract class Asset
         PurchaseDate = purchaseDate;
     }
 }
-
-// todo office e gore sirala
-// diger siralamalar

@@ -4,20 +4,6 @@ using Mini_Projects.ProductList;
 using Mini_Projects.ProductList.V2;
 using Mini_Projects.Utils;
 
-//======================================
-// IAvailability icinde isAvailable functionu barindiracak
-// Noticeboardda availiblity provider listesi olacak
-// Noriceboard getAvailableList functioni ile filtreleyip donecek
-//======================================
-
-
-// var telefon = new Product("","",2);
-// telefon.Color = "x";
-// Console.WriteLine(telefon.Color);
-// Console.WriteLine(telefon.Color);
-
-// return;
-
 while (true)
 {
     Console.Clear();
