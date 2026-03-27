@@ -13,7 +13,6 @@ using Mini_Projects.Utils;
 
 // var telefon = new Product("","",2);
 // telefon.Color = "x";
-//
 // Console.WriteLine(telefon.Color);
 // Console.WriteLine(telefon.Color);
 

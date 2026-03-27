@@ -4,12 +4,12 @@ public abstract class Asset
 {
     public string Brand { get; set; }
     public string Model { get; set; }
-    public int Price { get; set; }
+    public double Price { get; set; }
     public Office Office { get; set; }
     public DateTime PurchaseDate { get; set; }
     public abstract string Type { get; }
 
-    public Asset(string brand, string model, int price, Office office, DateTime purchaseDate)
+    public Asset(string brand, string model, double price, Office office, DateTime purchaseDate)
     {
         Brand = brand;
         Model = model;
@@ -20,5 +20,4 @@ public abstract class Asset
 }
 
 // todo office e gore sirala
-// renklendirme
 // diger siralamalar
