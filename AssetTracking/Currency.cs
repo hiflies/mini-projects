@@ -5,4 +5,5 @@ public enum Currency
     USD,
     EUR,
     SEK,
+    // CHF,
 }

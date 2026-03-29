@@ -39,22 +39,14 @@ public class AssetTracker
             DateTime today = DateTime.Now;
             TimeSpan remainingTime = expirationDate - today;
             double remainingMonths = remainingTime.TotalDays / 30;
-            if (remainingMonths < 0)
+            Console.ForegroundColor = remainingMonths switch
             {
-                Console.ForegroundColor = ConsoleColor.Black;
-            }
-            else if (remainingMonths < 3)
-            {
-                Console.ForegroundColor = ConsoleColor.DarkRed;
-            }
-            else if (remainingMonths < 6)
-            {
-                Console.ForegroundColor = ConsoleColor.DarkYellow;
-            }
-            else
-                Console.ForegroundColor = ConsoleColor.White;
-            
-            
+                < 0 => ConsoleColor.Black,
+                < 3 => ConsoleColor.DarkRed,
+                < 6 => ConsoleColor.DarkYellow,
+                _ => ConsoleColor.White
+            };
+
             Console.Write(asset.Office.Name.PadRight(20));
             Console.Write(asset.Type.PadRight(20));
             Console.Write(asset.Brand.PadRight(20));

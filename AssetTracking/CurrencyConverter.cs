@@ -12,6 +12,11 @@ public class CurrencyConverter // Class that handles fetching the exchange rates
 
     public static void FetchRates()
     {
+        if (currencyList.Count > 0)
+        {
+            return;
+        }
+        
         string url = "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml"; // Exchange rate XML document
 
         XmlTextReader reader = new XmlTextReader(url);

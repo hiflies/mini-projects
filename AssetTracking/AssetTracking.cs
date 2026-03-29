@@ -7,10 +7,12 @@ public class AssetTracking
         var usa = new Office("USA", Currency.USD);
         var sweden = new Office("Sweden", Currency.SEK);
         var germany = new Office("Germany", Currency.EUR);
+        // var switzerland = new Office("Switzerland", Currency.CHF);
         var tracker = new AssetTracker();
 
         tracker.AddAsset(new Smartphone("Motorola", "X3", 200, usa, DateTime.Now.AddMonths(-36 + 4)));
         tracker.AddAsset(new Smartphone("Motorola", "X3", 400, usa, DateTime.Now.AddMonths(-36 + 5)));
+        // tracker.AddAsset(new Smartphone("Motorola", "X3", 400, switzerland, DateTime.Now.AddMonths(-36 + 5)));
         tracker.AddAsset(new Smartphone("Motorola", "X2", 400, usa, DateTime.Now.AddMonths(-36 + 10)));
         tracker.AddAsset(new Smartphone("Samsung", "Galaxy 10", 4500, sweden, DateTime.Now.AddMonths(-36 + 6)));
         tracker.AddAsset(new Smartphone("Samsung", "Galaxy 10", 4500, sweden, DateTime.Now.AddMonths(-36 + 7)));
